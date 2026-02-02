@@ -62,16 +62,26 @@
 
       /* ===== SECTION ===== */
       section {
-        padding: 140px 100px;
+        padding: 30px 100px;
       }
 
       h1 {
         font-size: 54px;
-        margin-bottom: 20px;
         font-weight: 700;
-        background: linear-gradient(90deg, #38bdf8, #818cf8);
+        background: linear-gradient(90deg, #38bdf8, #818cf8, #38bdf8);
+        background-size: 200%;
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
+        animation: gradientMove 3s linear infinite;
+      }
+
+      @keyframes gradientMove {
+        0% {
+          background-position: 0%;
+        }
+        100% {
+          background-position: 200%;
+        }
       }
 
       h2 {
@@ -152,6 +162,81 @@
         }
         h1 {
           font-size: 40px;
+        }
+      }
+      .nav-links a {
+        position: relative;
+      }
+
+      .nav-links a::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: -6px;
+        width: 0%;
+        height: 2px;
+        background: #38bdf8;
+        transition: 0.3s;
+      }
+
+      .nav-links a:hover::after {
+        width: 100%;
+      }
+      #about {
+        padding-top: 120px; /* to avoid navbar overlap */
+      }
+      .btn {
+        position: relative;
+        overflow: hidden;
+      }
+
+      .btn::before {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(
+          120deg,
+          transparent,
+          rgba(255, 255, 255, 0.3),
+          transparent
+        );
+        left: -100%;
+        top: 0;
+        transition: 0.5s;
+      }
+
+      .btn:hover::before {
+        left: 100%;
+      }
+      .card:hover {
+        transform: translateY(-10px);
+        border-color: #38bdf8;
+        box-shadow: 0 0 25px rgba(56, 189, 248, 0.6);
+      }
+      section {
+        opacity: 0;
+        transform: translateY(40px);
+        animation: fadeUp 1s ease forwards;
+      }
+
+      section:nth-child(1) {
+        animation-delay: 0.2s;
+      }
+      section:nth-child(2) {
+        animation-delay: 0.4s;
+      }
+      section:nth-child(3) {
+        animation-delay: 0.6s;
+      }
+      section:nth-child(4) {
+        animation-delay: 0.8s;
+      }
+
+      @keyframes fadeUp {
+        to {
+          opacity: 1;
+          transform: translateY(0);
         }
       }
     </style>
@@ -308,8 +393,7 @@
       <p>Tap Academy, Bangalore, India</p>
       <iframe
         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3888.8662858112953!2d77.60805687444247!3d12.916314487394041!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae3d6411bbb945%3A0x884e5e751a18bc1!2sTAP%20ACADEMY%20BTM!5e0!3m2!1sen!2sin!4v1769785200450!5m2!1sen!2sin"
-        width="1500"
-        height="600"
+        style="width: 100%; height: 450px; border-radius: 16px"
         style="border: 0"
         allowfullscreen=""
         loading="lazy"
