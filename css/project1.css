@@ -1,4 +1,4 @@
-/* Google Font (Optional if you want extra premium look) */
+/* Google Font */
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap");
 
 /* Reset */
@@ -11,7 +11,7 @@
 
 /* Body */
 body {
-  background: linear-gradient(135deg, #0f0f0f, #1c1c1c);
+  background: linear-gradient(135deg, #121212, #1e1e1e);
   color: #f5f5f5;
   line-height: 1.7;
   padding: 40px 10%;
@@ -20,9 +20,9 @@ body {
 /* Main Title */
 h1 {
   text-align: center;
-  font-size: 2.5rem;
+  font-size: 2.3rem;
   margin-bottom: 30px;
-  color: #ff3c3c;
+  color: #ff4d4d;
   letter-spacing: 1px;
   text-transform: uppercase;
 }
@@ -31,8 +31,8 @@ h1 {
 h2 {
   margin-top: 40px;
   margin-bottom: 15px;
-  font-size: 1.8rem;
-  border-left: 5px solid #ff3c3c;
+  font-size: 1.7rem;
+  border-left: 4px solid #ff4d4d;
   padding-left: 10px;
   color: #ffffff;
 }
@@ -41,107 +41,49 @@ h2 {
 h3 {
   margin-top: 25px;
   margin-bottom: 10px;
-  font-size: 1.3rem;
+  font-size: 1.2rem;
   color: #ffcc00;
+  position: relative;
+  display: inline-block;
 }
 
-/* ===== IMAGE & VIDEO PREMIUM BORDER + RED GLOW ===== */
+/* Clean underline */
+h3::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  left: 0;
+  bottom: -4px;
+  background: #ff4d4d;
+}
 
+/* Images & Videos */
 img,
 video {
   display: block;
   width: 100%;
   max-width: 300px;
   margin: 20px 0;
-  border-radius: 15px;
+  border-radius: 12px;
 
-  /* Red Border */
-  border: 3px solid #ff1e1e;
+  border: 2px solid #ff4d4d;
 
-  /* Glow Effect */
-  box-shadow:
-    0 0 10px #ff1e1e,
-    0 0 20px #ff1e1e,
-    0 0 40px rgba(255, 30, 30, 0.6);
-
-  transition: all 0.4s ease;
+  /* Soft professional glow */
+  box-shadow: 0 0 12px rgba(255, 77, 77, 10);
 }
 
-/* Hover Animation */
-img:hover,
-video:hover {
-  transform: scale(1.05);
-  box-shadow:
-    0 0 15px #ff0000,
-    0 0 30px #ff0000,
-    0 0 60px rgba(255, 0, 0, 0.9);
-}
-
-/* ===== SONG SECTION EFFECT ===== */
-
+/* Audio */
 audio {
   display: block;
   width: 100%;
-
   margin: 15px 0 25px 0;
-  border-radius: 30px;
+  border-radius: 25px;
 
-  border: 2px solid #ff3c3c;
+  border: 2px solid #ff4d4d;
 
-  box-shadow:
-    0 0 10px #ff3c3c,
-    0 0 20px rgba(255, 60, 60, 0.7);
-
-  transition: all 0.4s ease;
-}
-
-/* Song Hover Glow */
-audio:hover {
-  transform: scale(1.05);
-  box-shadow:
-    0 0 15px #ff0000,
-    0 0 30px #ff0000,
-    0 0 50px rgba(255, 0, 0, 0.9);
-}
-
-/* ===== SONG TITLE EFFECT ===== */
-
-h3 {
-  color: #ffcc00;
-  position: relative;
-  display: inline-block;
-}
-
-/* Underline Glow Animation */
-h3::after {
-  content: "";
-  position: absolute;
-  width: 100%;
-  height: 3px;
-  left: 0;
-  bottom: -5px;
-  background: linear-gradient(to right, #ff0000, transparent);
-  transition: 0.4s ease;
-}
-
-h3:hover::after {
-  background: linear-gradient(to right, #ff0000, #ff0000);
-  box-shadow: 0 0 10px #ff0000;
-}
-
-/* Images */
-img {
-  display: block;
-  width: 100%;
-  max-width: 300px;
-  margin: 15px 0;
-  border-radius: 15px;
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.7);
-  transition: transform 0.4s ease;
-}
-
-img:hover {
-  transform: scale(1.05);
+  /* Subtle glow */
+  box-shadow: 0 0 10px rgba(255, 77, 77, 10);
 }
 
 /* Paragraph */
@@ -153,25 +95,19 @@ p {
 
 /* Highlight */
 mark {
-  background: #ff3c3c;
+  background: #ff4d4d;
   color: #fff;
-  padding: 4px 8px;
-  border-radius: 6px;
-  font-weight: bold;
+  padding: 3px 6px;
+  border-radius: 4px;
+  font-weight: 500;
 }
 
 /* Horizontal Line */
 hr {
   margin: 50px 0;
   border: none;
-  height: 2px;
-  background: linear-gradient(to right, transparent, #ff3c3c, transparent);
-}
-
-/* Smooth Hover Effect for Videos */
-video:hover {
-  transform: scale(1.02);
-  transition: 0.3s ease;
+  height: 1px;
+  background: linear-gradient(to right, transparent, #ff4d4d, transparent);
 }
 
 /* Responsive */
@@ -181,10 +117,17 @@ video:hover {
   }
 
   h1 {
-    font-size: 1.8rem;
+    font-size: 1.7rem;
   }
 
   h2 {
-    font-size: 1.4rem;
+    font-size: 1.3rem;
   }
+  b {
+    background-color: #ffcc00;
+  }
+}
+.movie_name {
+  color: #ffcc00;
+  text-transform: uppercase;
 }
