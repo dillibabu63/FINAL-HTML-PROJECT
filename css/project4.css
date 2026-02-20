@@ -1,0 +1,80 @@
+/* ===== RESET ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ===== PAGE BACKGROUND ===== */
+body {
+  font-family: "Segoe UI", Poppins, Arial, sans-serif;
+  background: linear-gradient(135deg, #0f172a, #1e293b);
+  color: #e5e7eb;
+  min-height: 100vh;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+/* ===== HEADINGS ===== */
+h1,
+h2 {
+  margin: 40px 0 20px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+h1 {
+  font-size: 32px;
+  background: linear-gradient(90deg, #38bdf8, #22c55e);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+h2 {
+  font-size: 24px;
+  color: #93c5fd;
+}
+
+/* ===== IFRAME CARD STYLE ===== */
+iframe {
+  display: block;
+  margin: 0 auto 40px;
+  border-radius: 16px;
+  background: #000;
+  box-shadow:
+    0 20px 40px rgba(0, 0, 0, 0.5),
+    0 0 0 2px rgba(255, 255, 255, 0.05);
+  transition:
+    transform 0.4s ease,
+    box-shadow 0.4s ease;
+}
+
+/* ===== HOVER EFFECT ===== */
+iframe:hover {
+  transform: translateY(-6px) scale(1.01);
+  box-shadow:
+    0 30px 60px rgba(0, 0, 0, 0.7),
+    0 0 0 2px rgba(56, 189, 248, 0.6);
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 900px) {
+  iframe {
+    width: 95% !important;
+    height: 420px !important;
+  }
+}
+
+@media (max-width: 600px) {
+  h1 {
+    font-size: 24px;
+  }
+
+  h2 {
+    font-size: 18px;
+  }
+
+  iframe {
+    height: 300px !important;
+  }
+}
